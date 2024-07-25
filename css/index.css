@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #871dff;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background: #000000;
+    transition: 1s ease;
+}
+
+footer {
+    background: #5700b9;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
