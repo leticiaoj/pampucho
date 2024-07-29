@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pampuchos</title>
+    <title>Pampuchos</title>
     <link rel="stylesheet" href="css/galeria.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <script src="js/degrade.js"></script>
     <nav>
-        <a href="index.html">ILY</a>
-        <a href="compatibilidade.html">Compatibilidade</a>
-        <a href="galeria.html">Galeria</a>
+        <a href="index.html" class="ily-link">Eu te amo</a>
+        <a href="compatibilidade.html" class="compatibilidade-link">Compatibilidade</a>
+        <a href="galeria.html" class="galeria-link">Galeria</a>
     </nav>
 
+    <div class="audio">
+        <h2>Escolha uma música:</h2>
+        <select id="musicSelector">
+            <option value="assets/audios/Mc Igu - Wife (Áudio).mp3">Mc Igu - Wife</option>
+            <option
+                value="assets/audios/Bad Bunny (ft. Bomba Estéreo) - Ojitos Lindos (360 Visualizer)  Un Verano Sin Ti.mp3">
+                Bad Bunny - Ojitos Lindos</option>
+            <option value="assets/audios/Amor I Love You (Ao Vivo).mp3">Amor I Love You (Ao Vivo)</option>
+        </select>
+        <audio id="audio" controls></audio>
+    </div>
 
-    
     <footer>
         <p>2708</p>
     </footer>
+
+    <script src="js/audio.js"></script>
 </body>
+
 </html>
