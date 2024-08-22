@@ -19,20 +19,23 @@
 </head>
 
 <body>
-    <script src="js/degrade.js"></script>
+    <script src="js/index.js"></script>
     <nav>
         <a href="index.html" class="ily-link">Eu te amo</a>
         <a href="compatibilidade.html" class="compatibilidade-link">Compatibilidade</a>
         <a href="galeria.html" class="galeria-link">Galeria</a>
     </nav>
 
+    <section class="section">
+        <picture>
+            <source srcset="assets/videos/vertical.mp4" media="(max-width: 768px)" type="video/mp4" class="video2">
+            <source srcset="assets/videos/horizontal.mp4" media="(min-width: 769px)" type="video/mp4" class="video3">
 
-    <div class="container">
-        <div class="content">
-            <div class="card">
-                <h1 class="titulo">2 anos de muito amor</h1>
-            </div>
-            <div class="coracao">&#10084;&#65039;</div>
+            <video class="video1" autoplay loop muted>
+                <source src="assets/videos/horizontal.mp4" type="video/mp4">
+            </video>
+        </picture>
+    </section>
 
 
             <footer>
