@@ -46,7 +46,7 @@ function startGame() {
 
         obstacles.forEach(obstacle => {
             if (checkCollision(mario, obstacle) && !mario.classList.contains('jump')) {
-                alert('Chapou, veinho! Você tropeçou em um pombo e ele comeu todas as migalhas de cachorro-quente. Tente novamente, sua namorada continua com fome!');
+                alert('Chapou, veinho! Você tropeçou em um pombo e ele comeu todas as migalhas de cachorro-quente. Tente novamente, sua namorada está com fome!');
                 clearInterval(gameInterval);
                 if (restartButton) restartButton.style.display = 'block';
             }

@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 0%);
+}
+
+#header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+#title {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#description {
+    font-size: 1.2em;
+    color: white;
+    margin: 10px 0;
+}
+
+#gameControls {
+    margin-top: 20px;
+}
+
+#gameControls button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#gameArea {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+
+#spaceship {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url('../assets/jogos/nave.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+}
+
+.zombie {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('../assets/jogos/zombie3.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: yellow;
+}
+
+.game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
