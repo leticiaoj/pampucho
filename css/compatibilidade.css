@@ -9,24 +9,40 @@ html, body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     background: linear-gradient(to bottom, #4c00ff, #7700ff, #9900ff);
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh; /* Faz o body ocupar a altura total da viewport */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* Ajusta a largura para ser mais responsiva */
+    max-width: 600px; /* Define uma largura máxima para telas maiores */
+    max-height: 400px;
+    margin: 20px auto; /* Centraliza horizontalmente */
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 nav a {
@@ -36,38 +52,40 @@ nav a {
     border-radius: 100px;
 }
 
-.compatibilidade-link{
+nav a:hover {
+    transition: 0.5s ease;
     background: linear-gradient(to right, #9900ff, #7700ff);
 }
 
-nav a:hover {
-    transition: 5s ease;
-    background: linear-gradient(to right, #9900ff, #7700ff);
-}
 footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+    position: fixed;
+    bottom: 0;
 }
 
 .titulo {
     font-family: "Josefin Sans", sans-serif;
-    color: #3c00ff;
+    color: #ccb7ff;
+    margin-bottom: 30px; /* Espaço entre o título e a descrição */
+    text-align: center;
 }
 
-.container {
+.descricao {
+    font-family: 'Nunito', sans-serif;
+    color: #555;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaço entre a descrição e a caixa */
 }
 
 .input-group {
     margin-bottom: 20px;
+    width: 100%; /* Torna os inputs responsivos */
 }
 
 input {
+    width: calc(100% - 22px); /* Torna os inputs responsivos */
     padding: 10px;
     margin: 5px;
     border: 1px solid #7700ff;
@@ -82,6 +100,7 @@ button {
     border-radius: 100px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%; /* Torna o botão responsivo */
 }
 
 button:hover {
@@ -113,11 +132,28 @@ button:hover {
     color: #888888;
 }
 
-.coracao.calculado{
+.coracao.calculado {
     color: #ff5e5e;
 }
 
 .porcentagem {
     font-size: 24px;
     margin-top: 10px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Ajusta a largura em telas menores */
+        padding: 15px; /* Reduz o padding */
+    }
+
+
+    button {
+        font-size: 14px; /* Reduz o tamanho do botão */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Reduz o tamanho do texto dos inputs */
+    }
 }

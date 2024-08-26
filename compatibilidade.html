@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pampuchos</title>
     <link rel="stylesheet" href="css/compatibilidade.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <script src="js/degrade.js"></script>
     <nav>
-        <a href="index.html" class="ily-link">Eu te amo</a>
+        <a href="index.html" class="ily-link">Pampuchos</a>
         <a href="jogos.html" class="compatibilidade-link">Jogos</a>
         <a href="galeria.html" class="galeria-link">Galeria</a>
     </nav>
 
+    <!-- Título e Descrição -->
+    <h1 class="titulo">Jogo de Compatibilidade</h1>
+
     <div class="container">
-        <h1 class="titulo">Jogo de Compatibilidade</h1>
+        <p class="descricao">Descubra se você e a pessoa amada são compatíveis preenchendo os seguintes campos: </p>
         <div class="input-group">
             <input type="text" id="nome1" placeholder="Seu lindo nome">
             <input type="text" id="nome2" placeholder="Nome da pessoa amada">
@@ -35,10 +35,9 @@
             <img class="carregando-img" src="assets/itens/carregando.gif" alt="Carregando">
             <p>Calculando...</p>
         </div>
-        <div id="resultado">
+        <div id="resultado" class="hidden">
             <div class="coracao">❤️</div>
             <div class="porcentagem">0%</div>
-            <div class="mensagem">Vocês são feitos um para o outro! Se casem!</div>
         </div>
     </div>
     <script src="js/compatibilidade.js"></script>
