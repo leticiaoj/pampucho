@@ -3,6 +3,9 @@ const spaceship = document.getElementById('spaceship');
 const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
 const gameMessage = document.getElementById('gameMessage');
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
+const shootButton = document.getElementById('shootButton');
 const spaceshipSpeed = 10;
 const bulletSpeed = 10; // Velocidade da bala
 const maxZombies = 20; // Número total de zumbis a serem criados
@@ -14,6 +17,7 @@ let gameStarted = false; // Verifica se o jogo foi iniciado
 // Função para iniciar o jogo
 function startGame() {
     startButton.style.display = 'none';
+    restartButton.style.display = 'none'; // Ocultar botão de reinício ao iniciar o jogo
     gameMessage.textContent = '';
     gameStarted = true;
     zombieCount = 0; // Reinicia o contador de zumbis
@@ -79,29 +83,30 @@ function moveObjects() {
                 bullet.remove();
                 bullets.splice(bulletIndex, 1);
                 zombies.splice(zombieIndex, 1);
-                checkGameOver(); // Verifica se o jogo terminou
+                checkGameOver();
             }
         });
     });
 
-    zombies.forEach((zombie, zombieIndex) => {
+    // Mover os zumbis para baixo
+    zombies.forEach(zombie => {
         const currentTop = parseFloat(window.getComputedStyle(zombie).top);
         zombie.style.top = `${currentTop + 1}px`;
 
-        // Remover o zumbi se sair da tela
+        // Verificar se um zumbi saiu da tela
         if (currentTop > gameArea.offsetHeight) {
             zombie.remove();
-            zombies.splice(zombieIndex, 1);
-            checkGameOver(); // Verifica se o jogo terminou
+            zombies = zombies.filter(z => z !== zombie);
+            zombieCount--;
+            checkGameOver();
         }
     });
 }
 
-// Função para detectar colisão
+// Função para verificar colisão entre balas e zumbis
 function isCollision(bullet, zombie) {
     const bulletRect = bullet.getBoundingClientRect();
     const zombieRect = zombie.getBoundingClientRect();
-
     return (
         bulletRect.left < zombieRect.right &&
         bulletRect.right > zombieRect.left &&
@@ -113,7 +118,7 @@ function isCollision(bullet, zombie) {
 // Função para verificar se o jogo terminou
 function checkGameOver() {
     if (zombies.length === 0) {
-        gameOver('Parabéns! Você derrotou todos os nóias e salvou a sua mulher!');
+        gameOver('Parabéns! Você derrotou todos os zumbis e salvou a sua mulher!');
     }
 }
 
@@ -124,9 +129,8 @@ function gameOver(message) {
     gameOverMessage.textContent = message;
     gameMessage.appendChild(gameOverMessage);
     restartButton.style.display = 'block'; // Exibir o botão de reinício
-    
-    // Desabilitar movimentos e tiros
-    document.removeEventListener('keydown', handleKeyDown);
+    gameStarted = false;
+    document.removeEventListener('keydown', handleKeyDown); // Desativar movimentos e tiros
 }
 
 // Função para reiniciar o jogo
@@ -152,13 +156,55 @@ function handleKeyDown(e) {
     }
 }
 
+// Função para lidar com toques e cliques em dispositivos móveis
+function handleTouchStart(e) {
+    const touch = e.touches[0];
+    const touchX = touch.clientX;
+
+    if (touchX < window.innerWidth / 3) {
+        moveLeft();
+    } else if (touchX > window.innerWidth * 2 / 3) {
+        moveRight();
+    } else {
+        shoot();
+    }
+}
+
+// Função para mover a nave para a esquerda
+function moveLeft() {
+    const spaceshipLeft = spaceship.offsetLeft;
+    if (spaceshipLeft > 0) {
+        spaceship.style.left = `${spaceshipLeft - spaceshipSpeed}px`;
+    }
+}
+
+// Função para mover a nave para a direita
+function moveRight() {
+    const spaceshipLeft = spaceship.offsetLeft;
+    if (spaceshipLeft < gameArea.offsetWidth - spaceship.offsetWidth) {
+        spaceship.style.left = `${spaceshipLeft + spaceshipSpeed}px`;
+    }
+}
+
 // Adiciona eventos aos botões
 startButton.addEventListener('click', startGame);
 restartButton.addEventListener('click', restartGame);
 
-// Adiciona o evento de clique para pular
-gameArea.addEventListener('click', () => {
-    if (gameStarted) {
-        shoot();
+// Eventos de toque para dispositivos móveis
+document.addEventListener('touchstart', handleTouchStart);
+
+// Eventos de cliques para botões móveis
+leftButton.addEventListener('click', moveLeft);
+rightButton.addEventListener('click', moveRight);
+shootButton.addEventListener('click', shoot);
+
+// Função para iniciar o jogo com clique em qualquer lugar
+function handleClickAnywhere(e) {
+    if (!gameStarted) {
+        startGame();
+        document.removeEventListener('click', handleClickAnywhere); // Remove o listener após o jogo iniciar
     }
-});
+}
+
+// Adiciona o evento de clique em qualquer lugar da tela
+document.addEventListener('click', handleClickAnywhere);
