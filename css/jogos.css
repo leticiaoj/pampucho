@@ -56,7 +56,7 @@ main {
 
 .game-title {
     color: #3c00ff;
-    margin-top: 10px; /* Define a distância do título da borda superior */
+    margin-top: 8px; /* Define a distância do título da borda superior */
     margin-bottom: 10px;
 }
 
@@ -65,7 +65,8 @@ main {
     margin: 0;
     flex-grow: 1; /* Faz a descrição crescer para ocupar o espaço disponível */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    margin: 10px; /* Centraliza horizontalmente */
 }
 
 .game-link {
@@ -77,6 +78,7 @@ main {
     border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-bottom: 10px; /* Define a distância do botão da borda inferior */
+    margin-top: 5px;
 }
 
 .game-link:hover {
