@@ -33,7 +33,7 @@ function startGame() {
 
 // Função para criar os primeiros zumbis
 function createInitialZombies() {
-    for (let i = 0; i < 5; i++) { // Inicialmente criar 5 zumbis para começar
+    for (let i = 0; i < 10; i++) { // Inicialmente criar 5 zumbis para começar
         createZombie();
     }
 }
