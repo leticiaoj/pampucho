@@ -5,9 +5,32 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 10;
+    background: transparent;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+nav a:hover {
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #9900ff, #7700ff);
+}
+
 #header {
     position: absolute;
-    top: 20px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -44,7 +67,6 @@ body {
     overflow: hidden;
     background-color: #000000;
 }
-
 
 #spaceship {
     position: absolute;

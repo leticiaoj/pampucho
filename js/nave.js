@@ -155,3 +155,10 @@ function handleKeyDown(e) {
 // Adiciona eventos aos botões
 startButton.addEventListener('click', startGame);
 restartButton.addEventListener('click', restartGame);
+
+// Adiciona o evento de clique para pular
+gameArea.addEventListener('click', () => {
+    if (gameStarted) {
+        shoot();
+    }
+});
