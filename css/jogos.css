@@ -65,7 +65,6 @@ main {
     margin: 0;
     flex-grow: 1; /* Faz a descrição crescer para ocupar o espaço disponível */
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
 }
 
@@ -75,7 +74,7 @@ main {
     color: #ffffff;
     padding: 10px 10px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-bottom: 10px; /* Define a distância do botão da borda inferior */
 }
