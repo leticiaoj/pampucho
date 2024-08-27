@@ -70,7 +70,9 @@ footer {
     color: #ccb7ff;
     margin-bottom: 30px; /* Espaço entre o título e a descrição */
     text-align: center;
-    font-size: 2em;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .descricao {
