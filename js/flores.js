@@ -4,6 +4,7 @@ const obstacles = document.querySelectorAll('.obstacle');
 const flowers = document.querySelectorAll('.flower');
 const startButton = document.getElementById('start-button');
 const restartButton = document.getElementById('restart-button');
+const gameArea = document.getElementById('game'); // Seleciona a área do jogo
 
 // Variáveis do jogo
 let gameInterval;
@@ -85,11 +86,20 @@ function resetGame() {
     startButton.style.display = 'block';
 }
 
+// Evento de teclado para o pulo
 document.addEventListener('keydown', (event) => {
     if ((event.code === 'KeyW' || event.code === 'ArrowUp') && gameStarted) {
         jump();
     }
 });
 
+// Evento de clique para pular (para dispositivos móveis)
+gameArea.addEventListener('click', () => {
+    if (gameStarted) {
+        jump();
+    }
+});
+
+// Adiciona eventos aos botões de início e reinício
 if (startButton) startButton.addEventListener('click', startGame);
 if (restartButton) restartButton.addEventListener('click', resetGame);

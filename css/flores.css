@@ -116,13 +116,34 @@ button {
     margin-bottom: 20px;
 }
 
-
+/* Estilo para o gradiente de texto */
 .title-gradient {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3rem; /* Ajusta o tamanho da fonte conforme necessário */
     background: linear-gradient(to right, red, yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 600px) {
+    #game {
+        padding-top: 70px; /* Espaço extra para dispositivos móveis */
+    }
+    
+    .title-gradient {
+        font-size: 2rem; /* Reduz o tamanho da fonte em dispositivos menores */
+    }
+    
+    .instructions {
+        font-size: 16px; /* Ajusta o tamanho do texto */
+        padding: 5px; /* Ajusta o padding para dispositivos menores */
+    }
+
+    button {
+        padding: 8px 16px; /* Ajusta o tamanho dos botões */
+        font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
+    }
 }
