@@ -5,33 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cachorro-Quente</title>
     <link rel="stylesheet" href="css/flores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="ily-link">Pampuchos</a>
+        <a href="jogos.html" class="compatibilidade-link">Jogos</a>
+        <a href="galeria.html" class="galeria-link">Galeria</a>
+    </nav>
+
     <div id="game">
-        <!-- Adicionando o título acima de todos os elementos -->
-        <h1 style="text-align: center; color: white;">Cachorro Quente de Osasco</h1>
+
+        <h1 class="title-gradient">Cachorro Quente de Osasco</h1>
         
-        <!-- Textos de instruções modificados para serem uma lista e ficarem alinhados corretamente -->
         <div class="instructions">
             <p>Leve os cachorros quentes de Osasco para a sua amada, mas tome cuidado para não tropeçar nos pombos, se não eles vão comer e sua amada ficará com fome.</p>
             <p>Pressione "W" ou "Seta para cima" para pular</p>
         </div>
         
-        <!-- Botões de controle -->
         <button id="start-button">Iniciar Jogo</button>
         <button id="restart-button" class="hidden">Reiniciar</button>
 
-        <!-- Elementos do jogo -->
         <div id="ground"></div>
-        <div id="mario"></div>
-        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 300px;"></img>
-        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 200px;"></img>
-        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 600px;"></img>
-        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 450px;"></img>
-        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 900px;"></img>
-        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 750px;"></img>
-        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 950px;"></img>
-        <div id="princess"></div>
+        
+        <img id="mario" src="assets/jogos/miamor.png" alt="Pepe">
+
+        <!-- Elementos existentes do jogo -->
+        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 300px;">
+        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 200px;">
+        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 600px;">
+        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 450px;">
+        <img class="obstacle" src="assets/jogos/pigeon-cartoon2.png" style="left: 900px;">
+        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 750px;">
+        <img class="flower" src="assets/jogos/hotdog-cartoon.png" style="left: 950px;">
+        
+        <img id="princess" src="assets/jogos/eu.png" alt="Lele">
     </div>
 
     <script src="js/flores.js"></script>

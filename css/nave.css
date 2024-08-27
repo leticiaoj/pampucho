@@ -2,6 +2,7 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: hsl(0, 0%, 0%);
+    font-family: 'Nunito', sans-serif;
 }
 
 #header {
