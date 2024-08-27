@@ -10,16 +10,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <script src="js/index.js"></script>
     <nav>
         <a href="index.html" class="ily-link">Pampuchos</a>
         <a href="jogos.html" class="compatibilidade-link">Jogos</a>
@@ -27,20 +23,18 @@
     </nav>
 
     <section class="section">
-        <picture>
-            <source srcset="assets/videos/vertical.mp4" media="(max-width: 768px)" type="video/mp4" class="video2">
-            <source srcset="assets/videos/horizontal.mp4" media="(min-width: 769px)" type="video/mp4" class="video3">
-
-            <video class="video1" autoplay loop muted>
-                <source src="assets/videos/horizontal.mp4" type="video/mp4">
-            </video>
-        </picture>
+        <video id="backgroundVideo" class="video1" autoplay loop muted>
+            <!-- Fonte padrão para vídeos horizontais -->
+            <source src="assets/videos/horizontal.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
     </section>
 
+    <footer>
+        <p>2708</p>
+    </footer>
 
-            <footer>
-                <p>2708</p>
-            </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
