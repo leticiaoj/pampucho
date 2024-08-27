@@ -6,14 +6,14 @@ body {
 }
 
 nav {
-    position: fixed; /* Altere para fixed para garantir que o nav fique no topo */
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    z-index: 1000; /* Garanta que o nav esteja acima de outros elementos */
-    background: rgba(0, 0, 0, 0.7); /* Adicione um fundo para melhor visibilidade */
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 nav a {
@@ -30,11 +30,12 @@ nav a:hover {
 
 #header {
     position: absolute;
-    top: 60px; /* Ajuste para não sobrepor o navbar */
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 500; /* Garantir que o header esteja abaixo do nav */
+    z-index: 500;
+    width: 90%; /* Ajuste a largura para 90% */
 }
 
 #title {
@@ -47,17 +48,6 @@ nav a:hover {
     font-size: 1.2em;
     color: white;
     margin: 10px 0;
-}
-
-#gameControls {
-    margin-top: 20px;
-}
-
-#gameControls button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
 }
 
 /* Ajustes para a área do jogo */
@@ -114,6 +104,21 @@ nav a:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
+#startButton, #restartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo para melhor visibilidade */
+    color: white;
+    border: 2px solid #fff;
+}
+
 /* Estilo para botões móveis */
 #mobileControls {
     display: none;
@@ -124,13 +129,17 @@ nav a:hover {
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
-    z-index: 1000; /* Certifique-se de que os botões móveis estejam acima de outros elementos */
+    z-index: 1000;
 }
 
 #mobileControls button {
     font-size: 1em;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 50%; /* Torna os botões redondos */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 2px solid #fff;
 }
 
 /* Mostrar controles móveis em telas pequenas */
@@ -145,34 +154,5 @@ nav a:hover {
 
     #header {
         top: 80px; /* Ajuste para que o título não sobreponha o nav */
-    }
-}
-
-/* Estilo para o botão iniciar/reiniciar */
-#startButton, #restartButton {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000; /* Garanta que o botão esteja acima de outros elementos */
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo para melhor visibilidade */
-    color: white;
-    border: 2px solid #fff;
-}
-
-/* Garantir que o botão iniciar/reiniciar esteja visível em todos os tamanhos de tela */
-@media (min-width: 769px) {
-    #startButton, #restartButton {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    #startButton, #restartButton {
-        display: block;
     }
 }
