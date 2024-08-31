@@ -51,6 +51,11 @@ footer {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Adiciona espaçamento ao redor do contêiner */
+    max-width: 500px; /* Largura máxima do contêiner */
+    width: 90%; /* Largura completa dentro do contêiner */
+    box-sizing: border-box;
 }
 
 h2 {
@@ -66,8 +71,9 @@ select {
     border-radius: 20px;
     background-color: #c5b4ff;
     cursor: pointer;
-    width: 250px;
+    width: 100%;
     outline: none;
+    margin-bottom: 10px;
 }
 
 audio {

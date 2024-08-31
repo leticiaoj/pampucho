@@ -82,8 +82,9 @@ main {
 }
 
 .game-link:hover {
-    transition: ease 2s;
+    transition: ease 1s;
     background: linear-gradient(to right, #7700ff, #9900ff);
+    transform: scale(1.1);
 }
 
 /* Navegação */
