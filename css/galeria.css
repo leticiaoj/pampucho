@@ -14,13 +14,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    min-height: 100vh;
 }
 
 nav {
@@ -36,12 +30,12 @@ nav a {
     border-radius: 100px;
 }
 
-.galeria-link{
+.galeria-link {
     background: linear-gradient(to right, #9900ff, #7700ff);
 }
 
 nav a:hover {
-    transition: 5s ease;
+    transition: 0.5s ease;
     background: linear-gradient(to right, #9900ff, #7700ff);
 }
 
@@ -51,28 +45,17 @@ footer {
     padding: 20px;
 }
 
-.titulo {
-    font-family: "Josefin Sans", sans-serif;
-    color: #3c00ff;
-}
-
 .audio {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    margin-top: 20px;
 }
 
 h2 {
-    margin-bottom: 10px;
     font-size: 24px;
-    font-family: "Josefin Sans", cursive;
+    font-family: "Josefin Sans", sans-serif;
     color: #3c00ff;
 }
 
@@ -80,25 +63,46 @@ select {
     padding: 10px;
     font-size: 16px;
     border: 2px solid #6600ff;
-    border-radius: 100px;
-    background-color: #fff;
+    border-radius: 20px;
+    background-color: #c5b4ff;
     cursor: pointer;
-    appearance: none;
     width: 250px;
     outline: none;
-}
-
-select:focus {
-    border-color: #7b00ff;
-}
-
-select option {
-    padding: 10px;
 }
 
 audio {
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
+    accent-color: #c5b4ff;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.title{
+    color: #c5b4ff;
+}
