@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="css/galeria-oculta.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icon/20240831_001748.png" type="image/png">
+</head>
+
+<body>
+    <!-- Script de Degradê -->
+    <script src="js/degrade.js"></script>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="index.html" class="ily-link">Pampuchos</a>
+        <a href="jogos.html" class="compatibilidade-link">Jogos</a>
+        <a href="galeria.html" class="galeria-link">Galeria</a>
+    </nav>
+
+    <!-- Seleção de Música -->
+    <div class="audio">
+        <h2>Escolha uma música:</h2>
+        <select id="musicSelector">
+            <option value="assets/audios/Mc Igu - Wife (Áudio).mp3">Mc Igu - Wife</option>
+            <option
+                value="assets/audios/Bad Bunny (ft. Bomba Estéreo) - Ojitos Lindos (360 Visualizer)  Un Verano Sin Ti.mp3">
+                Bad Bunny - Ojitos Lindos</option>
+            <option value="assets/audios/Amor I Love You (Ao Vivo).mp3">Amor I Love You (Ao Vivo)</option>
+        </select>
+        <audio id="audio" controls></audio>
+    </div>
+
+    <!-- Carrossel de Fotos -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-31 at 00.09.15.jpeg" alt="Foto 1">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55.jpeg" alt="Foto 2">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (7).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (6).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (5).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (4).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (3).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (2).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.55 (1).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54.jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (6).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (5).jpeg.png" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (4).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (3).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (2).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.54 (1).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.53.jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.53 (4).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.53 (3).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.53 (2).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.53 (1).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.52.jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.52 (3).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.52 (2).jpeg" alt="Foto 3">
+                <img src="assets/fotosz/WhatsApp Image 2024-08-30 at 23.27.52 (1).jpeg" alt="Foto 3">
+
+            </div>
+        </div>
+        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>2708</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/galeria-oculta.js"></script> <!-- Adicionado para o carrossel -->
+</body>
+
+</html>

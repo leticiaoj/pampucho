@@ -1,0 +1,153 @@
+/* Reset e Estilos Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #4c00ff, #7700ff, #9900ff);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.galeria-link {
+    background: linear-gradient(to right, #9900ff, #7700ff);
+}
+
+nav a:hover {
+    transition: 5s ease;
+    background: linear-gradient(to right, #9900ff, #7700ff);
+}
+
+/* Footer */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Títulos */
+.titulo {
+    font-family: "Josefin Sans", sans-serif;
+    color: #3c00ff;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: "Josefin Sans", cursive;
+    color: #3c00ff;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Select */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6600ff;
+    border-radius: 100px;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none;
+    width: 250px;
+    outline: none;
+}
+
+select:focus {
+    border-color: #7b00ff;
+}
+
+select option {
+    padding: 10px;
+}
+
+/* Áudio */
+.audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+audio {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
