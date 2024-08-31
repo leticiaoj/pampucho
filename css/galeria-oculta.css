@@ -104,5 +104,8 @@ audio {
 }
 
 .title{
+    font-family: "Josefin Sans", sans-serif;
     color: #c5b4ff;
+    text-align: center;
+    padding: 40px 0;
 }

@@ -160,3 +160,10 @@ button:hover {
         font-size: 14px; /* Reduz o tamanho do texto dos inputs */
     }
 }
+
+header {
+    font-family: "Josefin Sans", sans-serif;
+    color: #c5b4ff;
+    text-align: center;
+    padding: 40px 0;
+}
