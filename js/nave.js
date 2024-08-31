@@ -118,7 +118,7 @@ function isCollision(bullet, zombie) {
 // Função para verificar se o jogo terminou
 function checkGameOver() {
     if (zombies.length === 0) {
-        gameOver('Parabéns! Você derrotou os nóias e salvou a sua mulher!');
+        gameOver('Você gosta de vencer! Você derrotou os nóias e salvou a sua mulher!');
     }
 }
 

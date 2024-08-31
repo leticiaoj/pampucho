@@ -27,7 +27,7 @@ body {
     max-height: 400px;
     margin: 20px auto; /* Centraliza horizontalmente */
     padding: 20px;
-    background-color: #fff;
+    background-color: #c5b4ff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -77,7 +77,7 @@ footer {
 
 .descricao {
     font-family: 'Nunito', sans-serif;
-    color: #555;
+    color: #3c00ff;
     text-align: center;
     margin-bottom: 20px; /* Espaço entre a descrição e a caixa */
 }

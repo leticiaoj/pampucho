@@ -62,7 +62,7 @@ function startGame() {
 
         if (marioPosition > window.innerWidth - 100) {
             clearInterval(gameInterval);
-            alert(`Você venceu! Entregou ${collectedFlowers} cachorros-quentes para sua amada!`);
+            alert(`Você gosta de vencer! Entregou ${collectedFlowers} cachorros-quentes para sua amada!`);
             if (restartButton) restartButton.style.display = 'block';
         }
     }, 20);
