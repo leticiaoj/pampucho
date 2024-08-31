@@ -68,6 +68,8 @@ select {
     cursor: pointer;
     width: 250px;
     outline: none;
+    margin: 20px;
+    max-width: 400px;
 }
 
 audio {
