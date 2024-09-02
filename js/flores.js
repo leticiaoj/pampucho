@@ -4,11 +4,10 @@ const obstacles = document.querySelectorAll('.obstacle');
 const flowers = document.querySelectorAll('.flower');
 const startButton = document.getElementById('start-button');
 const restartButton = document.getElementById('restart-button');
-const gameArea = document.getElementById('game'); // Seleciona a área do jogo
+const gameArea = document.getElementById('game'); 
 
-// Variáveis do jogo
 let gameInterval;
-let marioPosition = 50; // Posição inicial de Mario
+let marioPosition = 50;
 let collectedFlowers = 0;
 let gameStarted = false;
 
@@ -18,7 +17,7 @@ function jump() {
     mario.classList.add('jump');
     setTimeout(() => {
         mario.classList.remove('jump');
-    }, 1000); // Duração do pulo
+    }, 1000);
 }
 
 function checkCollision(mario, object) {
@@ -40,7 +39,7 @@ function startGame() {
 
     gameStarted = true;
     startButton.style.display = 'none';
-    restartButton.style.display = 'none'; // Esconde o botão de reiniciar ao iniciar o jogo
+    restartButton.style.display = 'none';
     gameInterval = setInterval(() => {
         marioPosition += 2;
         if (mario) mario.style.left = marioPosition + 'px';
@@ -71,35 +70,29 @@ function startGame() {
 function resetGame() {
     if (!mario || !startButton || !restartButton) return;
 
-    // Redefinir as variáveis do jogo
     marioPosition = 50;
     collectedFlowers = 0;
     gameStarted = false;
 
-    // Redefinir a posição e visibilidade dos elementos
     if (mario) mario.style.left = marioPosition + 'px';
     obstacles.forEach(obstacle => obstacle.style.display = 'block');
     flowers.forEach(flower => flower.style.display = 'block');
 
-    // Ajustar botões de controle
     restartButton.style.display = 'none';
     startButton.style.display = 'block';
 }
 
-// Evento de teclado para o pulo
 document.addEventListener('keydown', (event) => {
     if ((event.code === 'KeyW' || event.code === 'ArrowUp') && gameStarted) {
         jump();
     }
 });
 
-// Evento de clique para pular (para dispositivos móveis)
 gameArea.addEventListener('click', () => {
     if (gameStarted) {
         jump();
     }
 });
 
-// Adiciona eventos aos botões de início e reinício
 if (startButton) startButton.addEventListener('click', startGame);
 if (restartButton) restartButton.addEventListener('click', resetGame);

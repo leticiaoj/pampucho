@@ -5,6 +5,12 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -35,7 +41,7 @@ nav a:hover {
     transform: translateX(-50%);
     text-align: center;
     z-index: 500;
-    width: 90%; /* Ajuste a largura para 90% */
+    width: 90%;
 }
 
 #title {
@@ -50,7 +56,6 @@ nav a:hover {
     margin: 10px 0;
 }
 
-/* Ajustes para a área do jogo */
 #gameArea {
     position: relative;
     width: 100vw;
@@ -114,12 +119,11 @@ nav a:hover {
     margin: auto;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo para melhor visibilidade */
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: 2px solid #fff;
 }
 
-/* Estilo para botões móveis */
 #mobileControls {
     display: none;
     position: fixed;
@@ -136,23 +140,22 @@ nav a:hover {
     font-size: 1em;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%; /* Torna os botões redondos */
+    border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: 2px solid #fff;
 }
 
-/* Mostrar controles móveis em telas pequenas */
 @media (max-width: 768px) {
     #gameControls {
-        display: none; /* Ocultar controles de desktop em telas pequenas */
+        display: none;
     }
     
     #mobileControls {
-        display: flex; /* Mostrar controles móveis em telas pequenas */
+        display: flex;
     }
 
     #header {
-        top: 80px; /* Ajuste para que o título não sobreponha o nav */
+        top: 80px;
     }
 }

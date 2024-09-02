@@ -17,11 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.height = video.offsetHeight + 'px';
     }
 
-    // Atualize a fonte do vídeo e ajuste a altura ao carregar a página
     updateVideoSource();
     adjustSectionHeight();
 
-    // Atualize a fonte do vídeo e ajuste a altura quando a janela é redimensionada
     window.addEventListener('resize', () => {
         updateVideoSource();
         adjustSectionHeight();

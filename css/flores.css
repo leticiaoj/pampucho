@@ -2,8 +2,14 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
-    width: 100vw; /* Garante que o conteúdo use toda a largura da tela */
+    width: 100vw;
     height: 100vh;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
 }
 
 nav {
@@ -32,10 +38,10 @@ nav a:hover {
 #game {
     position: relative;
     width: 100%;
-    height: calc(100vh - 50px); /* Ajusta a altura para considerar a navbar */
+    height: calc(100vh - 50px);
     background-color: skyblue;
     overflow: hidden;
-    padding-top: 50px; /* Espaço para a navbar */
+    padding-top: 50px;
 }
 
 #ground {
@@ -118,10 +124,9 @@ button {
     margin-bottom: 20px;
 }
 
-/* Estilo para o gradiente de texto */
 .title-gradient {
     text-align: center;
-    font-size: 3rem; /* Ajusta o tamanho da fonte conforme necessário */
+    font-size: 3rem;
     background: linear-gradient(to right, red, yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,23 +134,22 @@ button {
     color: transparent;
 }
 
-/* Responsividade para dispositivos menores */
 @media (max-width: 600px) {
     #game {
-        padding-top: 70px; /* Espaço extra para dispositivos móveis */
+        padding-top: 70px;
     }
     
     .title-gradient {
-        font-size: 2rem; /* Reduz o tamanho da fonte em dispositivos menores */
+        font-size: 2rem;
     }
     
     .instructions {
-        font-size: 16px; /* Ajusta o tamanho do texto */
-        padding: 5px; /* Ajusta o padding para dispositivos menores */
+        font-size: 16px;
+        padding: 5px;
     }
 
     button {
-        padding: 8px 16px; /* Ajusta o tamanho dos botões */
-        font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }

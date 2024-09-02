@@ -10,10 +10,15 @@ html, body {
     line-height: 1.6;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(to bottom, #4c00ff, #7700ff, #9900ff);
 }
 
 nav {
@@ -50,10 +55,10 @@ footer {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 20px; /* Adiciona espaçamento ao redor do contêiner */
-    max-width: 500px; /* Largura máxima do contêiner */
-    width: 90%; /* Largura completa dentro do contêiner */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
     box-sizing: border-box;
 }
 
